@@ -1,0 +1,8 @@
+result
+spa/result
+spa/dist
+spa/http_cache.sqlite
+spa/sbom.cdx.json
+spa/sbom.csv
+spa/sbom.spdx.json
+spa/node_modules
