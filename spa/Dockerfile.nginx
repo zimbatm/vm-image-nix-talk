@@ -1,0 +1,16 @@
+FROM node:lts AS build
+WORKDIR /build
+
+COPY package.json package-lock.json .
+RUN npm ci
+
+COPY . .
+
+RUN npm run build
+
+FROM nginx:alpine
+WORKDIR /run
+
+COPY --from=build /build/dist/ /usr/share/nginx/html
+
+EXPOSE 80/tcp

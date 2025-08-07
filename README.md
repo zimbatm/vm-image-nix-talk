@@ -77,6 +77,13 @@ docker load < result
 docker run -p 8080:80 spa-nix:latest
 ```
 
+You can compare this image with the container image you can build using `Dockerfile.nginx`:
+
+```bash
+cd spa
+docker build -t spa-docker -f Dockerfile.nginx .
+```
+
 ### Exploring the Images
 
 Use `dive` to explore the layer structure:
