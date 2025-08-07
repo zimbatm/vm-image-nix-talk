@@ -34,7 +34,7 @@
 
             config = {
               Entrypoint = [
-                "${pkgs.caddy}/bin/caddy"
+                "${pkgs.pkgsMusl.caddy}/bin/caddy"
                 "file-server"
                 "--root=${self.packages.${system}.default}"
               ];
