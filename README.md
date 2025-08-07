@@ -45,6 +45,7 @@ The `spa/` directory contains a React SPA example that demonstrates:
 - Building a Node.js application with Nix
 - Creating a layered Docker image
 - Serving static files with Caddy
+- Alternative `container.nix` file to build a container to serve images using nginx
 
 ```bash
 cd spa
@@ -60,6 +61,21 @@ docker run -p 8080:80 spa-nix:latest
 ```
 
 You can then visit http://localhost:8080 to see the running application.
+
+Alternatively you can build the nginx based container image:
+
+```bash
+cd spa
+
+# Build the Docker image
+nix build -f container.nix
+
+# Load into Docker
+docker load < result
+
+# Run the container
+docker run -p 8080:80 spa-nix:latest
+```
 
 ### Exploring the Images
 
@@ -96,4 +112,3 @@ The flake provides all necessary tools for the presentation:
 - `qrencode` - For generating QR codes
 - `dive` - For exploring container layers
 - `sbomnix` - For generating Software Bill of Materials
-
