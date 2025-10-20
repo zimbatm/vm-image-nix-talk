@@ -44,7 +44,9 @@
         };
 
         devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [ nodejs_24 presenterm crane jq qrencode dive sbomnix ];
+          buildInputs =
+            with pkgs;
+            [ nodejs_24 presenterm crane jq qrencode dive sbomnix hcloud nixos-anywhere ];
         };
       });
 }

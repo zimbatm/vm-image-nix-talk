@@ -6,4 +6,6 @@
 - [Building and running Docker images](https://nix.dev/tutorials/nixos/building-and-running-docker-images)
 - [pkgs.dockerTools](https://nixos.org/manual/nixpkgs/stable/#sec-pkgs-dockerTools)
 - [pkgs.dockerTools examples](https://github.com/NixOS/nixpkgs/blob/master/pkgs/build-support/docker/examples.nix)
-
+- [nixos-anywhere](https://github.com/nix-community/nixos-anywhere)
+- [Hetzner Cloud CLI](https://github.com/hetznercloud/cli)
+- [disko - declarative disks](https://github.com/nix-community/disko)

@@ -6,3 +6,4 @@ spa/sbom.cdx.json
 spa/sbom.csv
 spa/sbom.spdx.json
 spa/node_modules
+*.qcow2
